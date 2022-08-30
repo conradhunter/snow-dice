@@ -7,7 +7,7 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/cce1f5175d.js" crossorigin="anonymous"></script>
-    <title>Ski-Dice</title>
+    <title>Snow-Roll</title>
 </head>
 <body>
     <div id="hamburger__nav--modal">
@@ -20,7 +20,7 @@
     </div>
 
     <nav>
-        <h4 id="logo">SNOWDICE</h4>
+        <h4 id="logo">SNOW-ROLL</h4>
         <i class="fa-solid fa-bars nav__icon"></i>
     </nav>
 
@@ -31,18 +31,34 @@
             <h3 id="output"></h3>
         </div>
         <div id="level__select">
-            <button class="level__btn" onclick="generateEasySkiTrick()">Easy</button>
-            <button class="level__btn" onclick="generateMediumSkiTrick()">Medium</button>
+            <p class="trick__type">Jump Tricks:</p>
+            <button class="level__btn" onclick="generateEasySkiJumpTrick()">Easy</button>
+            <button class="level__btn" onclick="generateMediumSkiJumpTrick()">Medium</button>
+            <button class="level__btn">Hard</button>
+        </div>
+        <div id="level__select">
+            <p class="trick__type">Rail Tricks:</p>
+            <button class="level__btn" onclick="generateEasySkiRailTrick()">Easy</button>
+            <button class="level__btn" onclick="generateMediumSkiRailTrick()">Medium</button>
             <button class="level__btn">Hard</button>
         </div>
         <div id="rules">
-
+            <h3>How to play...</h3>
+            <ol>
+                <li>Click a difficulty to generate a trick</li>
+                <li>For 2 or more players</li>
+                <li>If you land the trick you advance</li>
+                <li>If you don't land the trick you suffer a forfeit or the player is out</li>
+                <li>Players can bet money per trick</li>
+                <li>The players can choose the amount of attempts allowed per trick</li>
+                <li>Can be played in a SLVSH style format</li>
+            </ol>
         </div>
     </main>
 
     <footer>
-        <h4 id="logo">SNOWDICE</h4>
-        <p id="footer__copyright">Copyright&copy; Conrad Hunter</p>
+        <h4 id="logo">SNOW-ROLL</h4>
+        <p id="footer__copyright">Copyright &copy; Conrad Hunter</p>
     </footer>
 </body>
 </html>

@@ -59,19 +59,33 @@ main {
     margin: 50px 0;
 }
 
+#output {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
 #level__select {
-    width: 60%;
+    width: 70%;
     max-width: 400px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    align-items: center;
 }
 
 .level__btn {
     border: 1px solid black;
     border-radius: 3px;
-    padding: 4px 6px;
-    font-size: 18px;
+    padding: 1px 2px;
+    font-size: 16px;
     background-color: rgb(224, 246, 253);
+    margin: 2px;
+}
+
+.trick__type {
+    font-size: 14px;
 }
 
 /* HAMBURGER MODAL */
@@ -98,4 +112,24 @@ main {
 #hamburger__nav--modal li {
     color: #ffffff;
     font-size: 26px;
+}
+
+#rules h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#rules {
+    margin: 25px 10% 0;
+}
+
+#rules li {
+    font-size: 10px;
+    width: 100%;
+    padding: 2px;
+}
+
+#rules ol {
+    display: flex;
+    flex-direction: column;
 }

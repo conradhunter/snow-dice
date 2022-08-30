@@ -9,7 +9,6 @@ const easySkiRail = [
   "Right 270 on",
   "Left 270 on",
   "Right 270 on",
-  "Backslide",
   "5050",
   "Switch 5050",
 ];
@@ -17,11 +16,16 @@ const mediumSkiRail = [
   "270 pretz 270",
   "270 continuing 270",
   "Switch 270 pretz 270",
+  "Switch 270 continuing 270",
   "Lip 270",
   "Switch Lip 270",
   "KFED",
   "Elusive",
   "Ray Charles",
+  "Backslide",
+  "Frontslide",
+  "Back surface swap",
+  "Front surface swap",
 ];
 const hardSkiRail = [];
 
@@ -94,6 +98,10 @@ const skiGrabs = [
     'Blunt',
     'Lead Blunt',
     'Trailing Blunt',
+    'Opp Nose',
+    'Same Nose',
+    'Nose',
+    'Dub Nose',
     'Cuban',
     'Lead Cuban',
     'Trailing Cuban',
@@ -104,8 +112,18 @@ const skiGrabs = [
     'Lead Safety',
     'Trailing Safety',
     'Bow and Arrow',
-    'Lead Bow and Arrow',
-    'Trailing Bow and Arrow',
+    'Any Grab',
+    'No Grab'
+];
+
+const easySkiGrabs = [
+  'Mute',
+  'Safety',
+  'Tail',
+  'Nose', 
+  'Japan',
+  'No Grab',
+  'Any Grab'
 ];
 
 //Snowboard Tricks Arrays
@@ -119,28 +137,42 @@ const hardSnowboardJump = [];
 
 // Logic
 
-//Check which array [i] is from in order to decide whether or not to add a grab to the trick
-
-
 const outputHeading = document.querySelector("#output");
 
-function generateEasySkiTrick() {
-  const easySkiTricks = easySkiRail.concat(easySkiJump);
-  const randomEasySkiTrick =
-    easySkiTricks[Math.floor(Math.random() * easySkiTricks.length)];
+const randomGrab = skiGrabs[Math.floor(Math.random() * skiGrabs.length)];
 
-  function appendEasySkiTrick() {
-    outputHeading.innerHTML = randomEasySkiTrick;
+// Easy Tricks Logic
+function generateEasySkiJumpTrick() {
+  const randomEasyGrab = easySkiGrabs[Math.floor(Math.random() * easySkiGrabs.length)];
+  const randomEasyJumpTrick = easySkiJump[Math.floor(Math.random() * easySkiJump.length)] + ' ' + randomEasyGrab;
+  function appendTrick() {
+    outputHeading.innerHTML = randomEasyJumpTrick;
   }
-  appendEasySkiTrick();
+  appendTrick();
 }
 
-function generateMediumSkiTrick() {
-  const mediumSkiTricks = mediumSkiRail.concat(mediumSkiJump);
-  const randomMediumSkiTrick = mediumSkiTricks[Math.floor(Math.random() * mediumSkiTricks.length)];
-  
-  function appendMediumSkiTrick() {
-    outputHeading.innerHTML = randomMediumSkiTrick;
+function generateEasySkiRailTrick() {
+  const randomEasyRailTrick = easySkiRail[Math.floor(Math.random() * easySkiRail.length)];
+  function appendTrick() {
+    outputHeading.innerHTML = randomEasyRailTrick;
   }
-  appendMediumSkiTrick();
+  appendTrick();
+}
+
+// Medium Tricks Logic
+function generateMediumSkiJumpTrick() {
+  const randomGrab = skiGrabs[Math.floor(Math.random() * skiGrabs.length)];
+  const randomMediumJumpTrick = mediumSkiJump[Math.floor(Math.random() * mediumSkiJump.length)] + ' ' + randomGrab;
+  function appendTrick() {
+    outputHeading.innerHTML = randomMediumJumpTrick;
+  }
+  appendTrick();
+}
+
+function generateMediumSkiRailTrick() {
+  const randomMediumRailTrick = mediumSkiRail[Math.floor(Math.random() * mediumSkiRail.length)];
+  function appendTrick() {
+    outputHeading.innerHTML = randomMediumRailTrick;
+  }
+  appendTrick();
 }
