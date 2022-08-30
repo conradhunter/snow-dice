@@ -26,6 +26,8 @@ const mediumSkiRail = [
   "Frontslide",
   "Back surface swap",
   "Front surface swap",
+  "Back 360 swap",
+  "Front 360 swap",
 ];
 const hardSkiRail = [];
 
