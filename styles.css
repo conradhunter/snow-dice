@@ -56,21 +56,42 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0;
+    margin-top: 50px;
 }
 
-#output {
+#feature__output {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 70%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#output, #feature-output {
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     padding: 0 10px;
 }
 
+#on-feature {
+    text-align: left;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px
+}
+
 #level__select {
     width: 70%;
     max-width: 400px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-bottom: 10px;
     align-items: center;
 }
@@ -86,6 +107,33 @@ main {
 
 .trick__type {
     font-size: 14px;
+}
+
+#input-feature-form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-feature-form p {
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+#input-feature-form input {
+    outline: none;
+    font-size: 12px;
+    padding: 1px 2px;
+}
+
+#addFeature-btn {
+    margin-left: 4px;
+    font-size: 12px;
+    background-color: rgb(224, 246, 253);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px 2px;
 }
 
 /* HAMBURGER MODAL */

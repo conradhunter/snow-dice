@@ -138,8 +138,32 @@ const hardSnowboardJump = [];
 // Logic
 
 const outputHeading = document.querySelector("#output");
-
 const randomGrab = skiGrabs[Math.floor(Math.random() * skiGrabs.length)];
+
+// Add features
+const input = document.querySelector('#input');
+const featuresList = [];
+const featureOutput = document.querySelector('#feature-output');
+
+function appendFeatureForTrick() {
+  function checkInput() {
+    if (input.value != '') {
+      addedFeature = input.value;
+    } else {
+      return
+    }
+  }
+  checkInput();
+  const featureToPerformTrickOn = featuresList[Math.floor(Math.random() * featuresList.length)];
+  featuresList.push(addedFeature);
+  input.value = '';
+  console.log(featuresList);
+  if (featuresList < 1) {
+    return
+  } else {
+    featureOutput.innerText = featureToPerformTrickOn;
+  }
+}
 
 // Easy Tricks Logic
 function generateEasySkiJumpTrick() {

@@ -30,6 +30,9 @@
         <div id="output__box">
             <h3 id="output"></h3>
         </div>
+        <div id="feature__output">
+            <h3 id="on-feature">On: <h3 id="feature-output"></h3></h3>
+        </div>
         <div id="level__select">
             <p class="trick__type">Jump Tricks:</p>
             <button class="level__btn" onclick="generateEasySkiJumpTrick()">Easy</button>
@@ -42,6 +45,15 @@
             <button class="level__btn" onclick="generateMediumSkiRailTrick()">Medium</button>
             <button class="level__btn">Hard</button>
         </div>
+
+        <div id="input__feature">
+            <div id="input-feature-form">
+                <p>Add features here:</p>
+                <input id="input" type="text">
+                <button id="addFeature-btn" onclick="appendFeatureForTrick()">Add</button>
+            </div>
+        </div>
+
         <div id="rules">
             <h3>How to play...</h3>
             <ol>
